@@ -5,6 +5,9 @@
 <title>HTML5</title>
 </head>
 <body>
+  <header>
+    <h1>HTML5</h1>
+  </header>
 <nav>
   <ul>
     <li><a href="#formato">Formato</a></li>
@@ -18,12 +21,15 @@
     <li><a href="#encajado">Contenido encajado</a></li>
     <li><a href="#simbolos">Símbolos especiales</a></li>
     <li><a href="#tablas">Tablas</a></li>
+    <li><a href="#modelos">Modelos de contenido</a></li>
+    <li><a href="#editores">Editores</a></li>
   </ul>
 </nav>
 <article>
   <header>
-    <h1>HTML5</h1>
+    <h2>Tutorial básico HTML5</h2>
   </header>
+
   <section id="formato">
     <header>
       <h2>Formato</h2>
@@ -68,12 +74,11 @@
     &lt;/head&gt;
     &lt;body&gt;
         Este es el texto de mi primer documento.
-&lt;/body&gt;
+    &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
     <p>La primera sección es la cabecera y la segunda el cuerpo. El siguiente paso, por lo tanto, será crear estas dos secciones en el código usando los elementos <b>&lt;/head&gt; y &lt;/body&gt;</b></p>
     <p>El elemento &lt;head&gt; va primero y al igual que el resto de los elementos estructurales tiene una etiqueta de apertura y una de cierre:</p>
-    <p>La siguiente gran sección que es parte principal de la organización de un documento <b>HTML</b> es el cuerpo. El cuerpo representa la parte visible de todo documento y es especificado entre etiquetas <b>&lt;/body&gt;.</b></p>
     <h2>Título</h2>
     <p>La etiqueta<b>&lt;title&gt;</b>especifica el título del documento. </p>
     <pre><code>
@@ -84,7 +89,7 @@
     &lt;/head&gt;
     &lt;body&gt;
         Este es el texto de mi primer documento.
-&lt;/body&gt;
+    &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
   </section>
@@ -101,18 +106,23 @@
    <b>&lt;meta charset="utf-8"&gt;</b>
    <b>&lt;meta name="author" content="Rafa"&gt;</b>
   &lt;/head&gt;
-  &lt;body&gt;Este es el texto de mi primer documento.&lt;/body&gt;
+  &lt;body&gt;
+      Este es el texto de mi primer documento.
+  &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
     <p>Hay varios tipos de etiqueta <b>&lt;meta&gt;</b> que pueden ser incluidas para declarar información general sobre el documento, pero esta información no es mostrada en la ventana del navegador, es solo importante para motores de búsqueda y dispositivos que necesitan hacer una vista previa del documento u obtener un sumario de la información que contiene. Aparte del título y algunos íconos, la mayoría de la información insertada entre las etiquetas <b>&lt;head&gt;</b> no es visible para los usuarios</p>
   </section>
   <section id="secciones">
     <header>
-      <h2>Secciones</h2>
+      <h2>Secciones<a href="http://www.w3.org/TR/2014/REC-html5-20141028/sections.html">*</a></h2>
     </header>
     <p>Cada sección definida en un sitio web tiene un propósito, ayudándonos a reconocer cualquiera de las secciones en todo diseño. HTML5 considera esta estructura básica y provee nuevos elementos para diferenciar y declarar cada una de sus partes. A partir de ahora podemos decir al navegador para qué es cada sección:</p>
-    <h3>Cuerpo</h3>
     <table>
+      <tr>
+        <td>Cuerpo</td>
+        <td>&lt;body&gt;</td>
+      </tr>
       <tr>
         <td>Artículo</td>
         <td>&lt;article&gt;</td>
@@ -146,11 +156,14 @@
         <td>&lt;address&gt;</td>
       </tr>
     </table>
-    <section>
-      <header>
-        <h2>Documento</h2>
-      </header>
-      <pre>
+    <h3>Cuerpo</h3>
+    <p>La siguiente gran sección que es parte principal de la organización de un documento <b>HTML</b> es el cuerpo. El cuerpo representa la parte visible de todo documento y es especificado entre etiquetas <b>&lt;/body&gt;.</b></p>
+  </section>
+  <section>
+    <header>
+      <h2>Documento</h2>
+    </header>
+    <pre>
 &lt; header&gt;
 &lt;/header&gt;
     &lt;nav&gt; … &lt;/nav&gt;
@@ -160,7 +173,6 @@
     &lt;/address&gt;
 &lt;/footer&gt;
 </pre>
-    </section>
     <p>Definimos el título de la página web utilizando el elemento <b>&lt;header&gt;</b>.</p>
     <pre><code>
 &lt;!doctype html&gt; 
@@ -205,7 +217,7 @@
       <h2>Títulos</h2>
       <h3>HEADING:</h3>
     </header>
-    <!--<h1>&lt;h1&gt;Texto de título de primer nivel&lt;/h1&gt;</h1>-->
+    <h1>&lt;h1&gt;Texto de título de primer nivel&lt;/h1&gt;</h1>
     <h2>&lt;h2&gt;Texto de título de segundo nivel&lt;/h2&gt;</h2>
     <h3>&lt;h3&gt;Texto de título de tercer nivel&lt;/h3&gt;</h3>
     <h4>&lt;h4&gt;Texto de título de cuarto nivel&lt;/h4&gt;</h4>
@@ -221,7 +233,7 @@
       <li>Texto preformateado</li>
       <li>Listas</li>
       <li>Línea horizontal</li>
-      <li>Otros</li>
+      <li><a href="http://www.w3.org/TR/2014/REC-html5-20141028/grouping-content.html">Otros</a></li>
     </ul>
     <section>
       <header>
@@ -306,7 +318,7 @@
       <li>Resaltado</li>
       <li>Salto de línea</li>
       <li>Hiperenlace</li>
-      <li>Otros</li>
+      <li><a href="http://www.w3.org/TR/2014/REC-html5-20141028/text-level-semantics.html">Otros</a></li>
     </ul>
     <h3>Resaltado</h3>
     <dl>
@@ -396,7 +408,7 @@
   </section>
   <section id="encajado">
     <header>
-      <h2>Contenido encajado: imágenes</h2>
+      <h2>Contenido encajado: <a href="http://www.w3.org/TR/html5/embedded-content-0.html">imágenes</a></h2>
     </header>
     <dl>
       <dt>Origen (SouRCe):</dt>
@@ -433,9 +445,6 @@
       <dd>circle: x-centro, y-centro, radio </dd>
       <dd> poly: x1, y1, x2, y2,…, xN, yN</dd>
     </dl>
-    <p> Crea un mapa de imágenes a partir de la imagen circulos.gif, de modo que al poner el ratón encima de cada círculo se muestre en el texto alternativo el color sobre el que está situado el ratón y enlace con una página web diferente en cada caso.</p>
-    <p> Mapas de imagen </p>
-    <p>Crea un mapa de imágenes a partir de la imagen aula.jpg de modo que al pasar con el ratón encima de: • La pizarra: aparezca el texto alternativo "Pizarra". • Puestos de los alumnos: aparezca el texto "Mesas de los alumnos". • Puesto del profesor: aparezca el texto "Puesto del profesor". • Pizarra digital (PDI): aparezca el texto "Pizarra digital".</p>
   </section>
   <section id="simbolos">
     <header>
@@ -532,7 +541,7 @@
   </section>
   <section id="tablas">
     <header>
-      <h2>Datos tabulados: tablas</h2>
+      <h2>Datos tabulados: <a href="http://www.w3.org/TR/html5/tabular-data.html">tablas</a></h2>
     </header>
     <pre>
 Tabla              &lt;table&gt;
@@ -568,9 +577,58 @@ Encabezado         Table Header &lt;th&gt;</pre>
       <li>Expansión en fila   colspan (en td y th)</li>
     </ul>
   </section>
+  <section id="modelos">
+    <header>
+      <h2>Modelos de contenido<a href="http://www.w3.org/TR/html5/dom.html">*</a></h2>
+    </header>
+    <ul>
+      <li>Metadatos (metadata)</li>
+      <li>Dinámico (flow)</li>
+      <li>Seccionado (sectioning)</li>
+      <li>Título (heading)</li>
+      <li>Estático (phrasing)</li>
+      <li>Encajado (embedded)</li>
+      <li>Interactivo (interactive)</li>
+      <li>Tangible (palpable: flow o phrasing)</li>
+      <li>Soporte de scripts (script-supporting)</li>
+      <li>– script y template</li>
+      <li>Transparente (transparent)</li>
+      <li>Párrafo (paragrahp)</li>
+    </ul>
+    <dl>
+      <dt>Bloque</dt>
+      <dd>Comienzan en línea nueva</dd>
+      <dd>Ocupan todo el ancho disponible</dd>
+      <dd>Pueden contener otros elementos de bloque o en línea</dd>
+      <dt>Elementos sin significado</dt>
+      <dd>&lt;div&gt;</dd>
+      <dd>HTML5 equivalente?</dd>
+      <dd>Contenido dinámico</dd>
+      <dt>En línea</dt>
+      <dd>Comienzan en la misma línea</dd>
+      <dd>Sólo ocupan el espacio necesario</dd>
+      <dd>Sólo pueden contener otros elementos en línea</dd>
+      <dt>Elementos sin significado</dt>
+      <dd>&lt;span&gt;</dd>
+      <dd>Contenido estático</dd>
+    </dl>
+  </section>
+  <section id="editores">
+    <header>
+      <h2>Editores</h2>
+    </header>
+    <ul>
+      <li>Atom: <a href="https://atom.io/">https://atom.io/</a></li>
+      <li>Brackets: <a href="https://brackets.io/">Brackets: https://brackets.io/</a></li>
+      <li>Sublime Text: <a href="https://www.sublimetext.com/">https://www.sublimetext.com/</a></li>
+      <li>Blue Griffon: <a href="http://www.bluegriffon.org/">http://www.bluegriffon.org/</a></li>
+      <li>Editores online: <a href="http://www.w3schools.com/">W3Schools</a>, <a href="https://www.tinymce.com/">TinyMCE</a>, <a href="https://html-online.com/">HTML online</a>, otros (buscador)</li>
+      <li>Comparación en <a href="https://en.wikipedia.org/wiki/Comparison_of_HTML_editors">Wikipedia</a></li>
+    </ul>
+  </section>
 </article>
 <footer>
-  <p>Este documento está basado en los apuntes de clase, el libro "El gran libro de HTML5 CSS3 y JavaScript y la información de la página <a href="http://www.w3schools.com/">www.w3schools.com</a></p>
+  <p>Este documento está basado en los apuntes de clase, el libro <cite>"El gran libro de HTML5 CSS3 y JavaScript"</cite> y la información de la página <a href="http://www.w3schools.com/">www.w3schools.com</a></p>
 </footer>
 </body>
 </html>
